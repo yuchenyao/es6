@@ -41,9 +41,22 @@ array = array.sort(function (a,b) {
 }); //
 
 // ES6
-
+let array = ['a','bc','def','ghij'];
+array = array.sort( (a, b) => a.length < b.length);
 //3.多行箭头函数
-
-
+//单一参数
+const fn = foo => {
+    return `${foo} World`;
+}
+//多参数
+const fn = (foo, bar) => {
+    return foo + bar;
+}
 
 //4.无参数箭头函数
+//如果箭头函数中没有参数传入，需要一对空括号来表示参数列表
+const fn = () => 'Hello World';
+//相当于
+var fn = function () {
+    return 'Hello World';
+}
